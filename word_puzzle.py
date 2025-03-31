@@ -1,18 +1,28 @@
+#I added more hint to help the user figure out the secret quicker
+
+#I handled the case where the user submits an empty guess
+
 print("Welcome to the word guessing game!")
 
-secret = "rolex"
+secret = "lemuel"
 
 guess = ""
 hint = "_ " * len(secret) 
 number_of_guess = 0
 
+
+
+print("HINT: One of the sons of Lehi in the book of Mormon")
 print(f"Your hint is: {hint}")
 
 while guess != secret:
     guess = input("What is your guess? ").lower()
     number_of_guess +=1
 
-    if len(guess) != len(secret):
+    if len(guess) == 0:
+        print("Please input your guess")
+
+    elif len(guess) != len(secret):
         print("Sorry, the guess must have the same number of letters as the secret word  ")
     
     elif len(guess) == len(secret) and guess != secret:
