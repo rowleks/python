@@ -1,6 +1,6 @@
 #I added more hint to help the user figure out the secret quicker
 
-#I handled the case where the user submits an empty guess
+#I also handled the case where the user submits an empty guess
 
 print("Welcome to the word guessing game!")
 
