@@ -1,10 +1,10 @@
 print("Welcome to the word guessing game!")
 
-secret = "moroni"
+secret = "rolex"
 
 guess = ""
-hint = ""
-number_of_guess = 1
+hint = "_ " * len(secret) 
+number_of_guess = 0
 
 print(f"Your hint is: {hint}")
 
@@ -27,7 +27,7 @@ while guess != secret:
                     hint_list[index] = char
             else:
                 hint_list[index] = "_"
-        hint = "".join(hint_list)
+        hint = " ".join(hint_list)
 
         print(f"Your hint is: {hint}")
         print("Continue")
