@@ -1,18 +1,17 @@
-word = "rolex"
+friends = []
 
-hint = "_" * len(word)
+user_input = ""
 
-word_list = list(word)
-hint_list = list(hint)
+while user_input != "End":
 
-for i, letter in enumerate(word):
-    if letter in "bobzy":
-        hint_list[i] = letter
+    user_input = input("Type the name of a friend: ").capitalize()
+    if user_input != "End":
+        friends.append(user_input)
 
-word_list[2] = "w"
-
-join_word = "".join(word_list)
-join_hint = "".join(hint_list)
-print(hint)
-print(hint_list)
-print(join_hint)
+print()
+if not friends:
+    print("You have no friends")
+else:
+    print("Your friends are:")
+    for friend in friends:
+        print(friend)
