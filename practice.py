@@ -30,5 +30,3 @@ while selected_action != 5:
         for item in cart:
             print(item)
     
-
-
